@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuador 2026 | El Legado del Fin de Año</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oro: #c5a059;
+            --negro: #080808;
+            --blanco: #ffffff;
+            --gris-premium: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* --- PORTADA --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                        url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&q=80&w=2069');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-title {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .hero-title h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: var(--oro);
+            letter-spacing: clamp(5px, 3vw, 15px);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero-title p {
+            letter-spacing: clamp(3px, 2vw, 10px);
+            margin-bottom: 10px;
+            opacity: 0.7;
+            font-size: clamp(0.9rem, 3vw, 1.2rem);
+        }
+
+        /* --- CARRUSEL PRINCIPAL (ahora debajo del título) --- */
+        .hero-carousel-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--oro);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .hero-carousel-track img {
+            width: 100%;
+            height: clamp(300px, 50vh, 500px);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            color: var(--oro);
+            border: 1px solid var(--oro);
+            padding: clamp(10px, 2vw, 15px);
+            cursor: pointer;
+            z-index: 10;
+            font-size: clamp(16px, 3vw, 20px);
+        }
+
+        .btn-prev {
+            left: 10px;
+        }
+
+        .btn-next {
+            right: 10px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1100px;
+            margin: -80px auto 100px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .intro-box {
+            background: var(--gris-premium);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: clamp(30px, 5vw, 50px);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-radius: 8px;
+        }
+
+        /* --- ACORDEÓN --- */
+        .seccion-elite {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #222;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            border-radius: 8px;
+        }
+
+        .seccion-elite:hover {
+            border-color: var(--oro);
+        }
+
+        .header-click {
+            padding: clamp(20px, 4vw, 25px) clamp(25px, 5vw, 35px);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Cinzel', serif;
+            color: var(--oro);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+
+        .info-desplegable {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 clamp(25px, 5vw, 35px);
+        }
+
+        .texto-contenido {
+            padding-bottom: 30px;
+            color: #d1d1d1;
+            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+        }
+
+        /* --- CARRUSELES INTERNOS --- */
+        .carousel-wrapper {
+            width: 100%;
+            max-width: 850px;
+            margin: 20px auto 40px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--oro);
+            border-radius: 8px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel-track img {
+            width: 100%;
+            height: clamp(250px, 40vh, 400px);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        footer {
+            background: #000;
+            padding: clamp(40px, 8vw, 80px) 20px;
+            text-align: center;
+            border-top: 2px solid var(--oro);
+        }
+
+        .link-lujo {
+            display: inline-block;
+            margin: 10px;
+            padding: clamp(12px, 3vw, 15px) clamp(20px, 4vw, 30px);
+            border: 1px solid var(--oro);
+            color: var(--oro);
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+
+        .link-lujo:hover {
+            background: var(--oro);
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 90vh;
+                padding: 15px;
+            }
+            
+            .hero-title {
+                margin-bottom: 30px;
+            }
+            
+            .container {
+                margin-top: -50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-carousel-track img {
+                height: 250px;
+            }
+            
+            .carousel-track img {
+                height: 200px;
+            }
+            
+            .nav-btn {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-title">
+            <p>TRADICIÓN MILENARIA</p>
+            <h1>ECUADOR 2026</h1>
+        </div>
+        
+        <!-- CARRUSEL PRINCIPAL (AHORA DEBAJO DEL TÍTULO) -->
+        <div class="hero-carousel-wrapper" id="ano-nuevo-slider">
+            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'ano-nuevo-slider')">❮</button>
+            <div class="hero-carousel-track">
+                <img src="https://i.postimg.cc/J4rFKZbF/AQNEs_KT00HREb3RTE7c_Xn_Ypn_Flb_P5OVTIzk_Cp_Nix_Eje_Nq6n_WKSLOS9_GVQc_X3L5En_W9ALCLQKINLZMLXZQy_Ytp_.jpg" alt="Celebración de año nuevo con fuegos artificiales">
+                <img src="https://i.postimg.cc/dt5xf36s/AQNRx_gtcpu_HNs4eycg_F2PISh9ec9tw4z_Gvqe_H69Zq_Od_Vep_He_L3hk0e_Joq_Tj_3al_Kgu_G10BSt0Gqe_UXc_o_Hy_O.jpg" alt="Multitud celebrando fin de año con luces">
+                <img src="https://i.postimg.cc/28ktThQb/AQNZ_pt_Sri_T2tzve1w1ojdsy_BQj6c_OVVH4I8_Zo_Yt_Ze1wh_HBQ9Hhd2l_VKIYGUL60IRX0yyyan_Pi_D2y_Cu_BYkzo6w_.jpg" alt="Decoraciones y luces de año nuevo">
+                <img src="https://i.postimg.cc/HsYN3XQf/AQNy_Q520IWEs_Pz7XJ3CZ5PHEh_Cp_OCi_H_v_O4bw8p_BBg_NSjkdi_Id03p_MZ0Y4SWg_Ltz_mm_OB5wd_U6p_Wj_OX_P79n3.jpg" alt="Celebración familiar con alegría y luces">
+                <img src="https://i.postimg.cc/tCqcDWhf/AQO_T2_Fu0ZZ3DR4TM4Kq_Mgcn_FFw_Jd_Ykib69TXa_MApks0Tw7b_B7p_ADBi_Hmne_AKXXzpe_Nb_Ls_EDDDNUk5u_Sommn_S.jpg" alt="Fuegos artificiales sobre ciudad de noche">
+                <img src="https://i.postimg.cc/tCqcDW3n/AQOj9z_AIQ9KEt_O86s_Nk1RLhm_F35RTsvkz_TJg6h3TQe0RSzs_Sk6wxg3rx_TWAOWb5Kn_MZl_A1_GQb_Kzv_F2b_DGS8t8e.jpg" alt="Mesa decorada con luces y globos de año nuevo">
+                <img src="https://i.postimg.cc/DyvN5Lrw/AQOKd1j_WAHmi_VUv0Yoo0AGDu1mywg_Sx_ZSk_Ba_Fs1ub7xy_SMi_C8z2u69ARLSAE5vm6UGQv_Wg4U8h_Hf_Ch_Cmge_GBORy.jpg" alt="Personas brindando con alegría en fin de año">
+                <img src="https://i.postimg.cc/3J8q9mgz/AQP7JAjxm_Tf_MUM8a13ZWv_Liac_If_TXcn_Cgp6Wg_IM9Jn_Xjc3DBFWY87Wm_Yc_Rt_Hdvtx81o4p_Fm_Ii_Nx_Yr_6Pg6V_S.jpg" alt="Celebración de año nuevo con luces y confeti">
+            </div>
+            <button class="nav-btn btn-next" onclick="controlSlide(1, 'ano-nuevo-slider')">❯</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="intro-box">
+            <h2 style="font-family: 'Cinzel'; margin-bottom: 20px; color: var(--oro);">Patrimonio de Fin de Año</h2>
+            <p>Ecuador celebra el cierre de ciclo con una mística única, donde el fuego y la unión familiar construyen nuestra identidad.</p>
+        </div>
+
+        <div class="acordeon-maestro">
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>01. Monigotes y Años Viejos</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>Los "años viejos" representan el ciclo que termina, elaborados con cartón o aserrín.</p>
+                        <div class="carousel-wrapper" id="viejos-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'viejos-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/T1JgsyXh/AQMvjd_STJg7n_Gq_DGOm_FIx59BAKaw_Ow_Ya9r6e_Lz_W4Ty9M_ZNg_JUw_F52AHWlh_Hltcbayzxd2Bj_S8Os_F2jlm_O3ba1.jpg">
+                                <img src="https://i.postimg.cc/kGvKHVd6/AQMUmc18XDCr_Fz_Tgb46zdga_GQi_THRR0NXG_g_Z0z_RBBZTf_Kt_VKKmos3uprjs_T22CKl77ZJEJf_ILe1Wkh_Dth_S3XI.jpg">
+                                <img src="https://i.postimg.cc/gjH87wPw/AQN8wn_YA5z_EH6H3DV_w_Sxv_YTp_Ssebn5WL_mu8vdlv80j_Wcel1Cc_Lu_H5Gph_SQbp_LVIubm_AYQob7bwq_Bj_Xb_JASM5.jpg">
+                                <img src="https://i.postimg.cc/WzwgyDPh/AQNRMQP6AQPXMz_Mj_WJEYk_Wz_K4F0Kl_FEc_U3p_ARpwt_BJTu_Exf1q_Mw_K2a_JZZSD_OPVvsa_b_PDKbebi5b_OOQ6NO8af.jpg">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'viejos-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>02. El Testamento Satírico</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>Una tradición intelectual donde se escribe un documento con rimas y mucho humor.</p>
+                        <div class="carousel-wrapper" id="testamento-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'testamento-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/6QB3HHQx/AQM7Ap_EY5r93USRf_Id8cn_He_CBLQV6TYfg_S_lu7day_MZJr_V5u_Yu3OQG2jhgj_U1w_J_7Tgs_Fz_N2Na2MTU0wa_UGtj1F.jpg">
+                                <img src="https://i.postimg.cc/HL3LFQrZ/AQMw_MNMNy_ZKa_Wu_IWPKU_e_H9lgei8Hsz_Cyc_AHk5gr_VZYTu_ZW13a_AF5zj5hp8hgd_Zm_G2x_K6MQp8CG_l1IVDr463v_.jpg">
+                                <img src="https://i.postimg.cc/TPQPBrKB/AQMyt_Oviy_Kj_YHd_FFr_QGW3O6Sl_A1Dm_Tha4UFVb_Tdg_Xmlu8Oam_IEv_G85as4OAFGj_Rdm_H8c_GR86Qp_Vft_Na7Mgj_.jpg">
+                                <img src="https://i.postimg.cc/tgDg8h1G/AQN2KXf_EEOj9k9Fhp_WV_Qmu4c5J9_5G57c_XSNHKeku_C_As_Ika_E7b_AAj_K3RTOd0lak_Nn0hu_L11H80ka_PSg91f_Rg_C.jpg">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'testamento-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>03. El Teatro de las Viudas</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>Hombres disfrazados de viudas que alegran las calles pidiendo una contribución para el "viejo".</p>
+                        <div class="carousel-wrapper" id="viudas-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'viudas-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/ZRH4WZPm/AQPU7AXcgfsi_G4XX05H7Cm7Hp5FGTrrk_ry1h_Xk_y_Xn9e_I_CEUJwp_J8Nt9p7hih_MDMs_Rdn_XYG9j_VDDH_7KZpcve.jpg">
+                                <img src="https://i.postimg.cc/Y9RMvkNw/AQP_o_EL5LRWFUj7FNVs_Fu_Nt_La_YDpwayc_Iz9xkf7Xq_Eq_KSKG3bs_YYj_Rdks_Xm_MYel_U6n_PHKk_Gx_UNJ0n_H94_0q.jpg">
+                                <img src="https://i.postimg.cc/vBhb4M7w/AQOVd_S_fkv84Sq9Nb_Yphb_Sl53Gu4p_Vm_A_6x_Sy_YD7i47ZMon0El2FO4E81A_5u_Qgt_Jno_9x_Yz7_7ordz_AAHTxg3h.jpg">
+                                <img src="https://i.postimg.cc/cHh0vZ7y/AQMset7Pg_Vh_KJK2bn1MBFta_X17z1X_m_HNC_c_Iq_Zzhvq8hi_X2i44E0IZk4j_P82MOOQ9e_Nlo_Hj_Jf40Eikm_Wi2Eh_DV.jpg">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'viudas-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>04. Banquetes</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>Cenas familiares con pavo y pernil.</p>
+                        <div class="carousel-wrapper" id="banquetes-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'banquetes-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/26Rgrtgt/AQNDB_H3ol_XFo_EO49RFaw_RQSWuu_AAro_Xll_XNGZPa4MKVRv_Vjdbkf_P1_fue8LJWqml_Vyc_h_Ym_Rlq_V905XLua_XDSW.jpg" alt="Cena de pavo ecuatoriano">
+                                <img src="https://i.postimg.cc/rmX7MH7b/AQMO5W3NX1Pd6lo3es_Ys_OUGWrm_Fegr_Vmsv_Xuw_MJ9_Z4r_LXr6gj_Sg0A8ekew0g_Trt27_HT8Qgo6dp_CKt6u_UUFXha_I.jpg" alt="Mesa familiar con pernil">
+                                <img src="https://i.postimg.cc/RF524Y2y/AQM_od_R324Rob_Q4t_Aav_L8Jt7zy_P1YHJe5G09Kr_Vqq_6kb_Gn0r_1Ht_Jkfzn_I7zt17s8PKW1I4n_IRr_ZJ2R7Yx_DRa_T.jpg" alt="Decoración de cena de fin de año">
+                                <img src="https://i.postimg.cc/rmX7MH7P/AQM_5Wjf_ZKKGInly2T0g_FDKms_y_Ht0q_Dm_FUVVp_MP8H4yp_Knr3HI26Ul_JVi_RL_UHSw_Jlk_Risb_V5Vp1c_TSj_Go_E9.jpg" alt="Comida y ambiente familiar ecuatoriano">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'banquetes-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>05. Cábalas</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>Rituales para atraer la buena suerte.</p>
+                        <div class="carousel-wrapper" id="cabalas-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'cabalas-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/zv5Bb0R1/AQPnc_P1U8Iq_Z_j_Lt_SOOMSOJu_PLya0HIZTC6tcr_ODXg_ZDO2MYNi_Tb_Adbi4Hlv_HGg2k_TJBBz_VWYw_Qse_FSowm_I4y.jpg" alt="Ritual de fin de año con uvas y velas">
+                                <img src="https://i.postimg.cc/D0FZJBbT/AQP8RBZ9cd6j_Gt_Qe1UPbufwq_T3h_DVJu57ro_kphndh7ehwc_Ly4Sx_Pxk_Gu_S9Mrto_V9Ky_Wui_UIB4PBG9e1y_Qfx_Hh.jpg" alt="Ritual de buena suerte en Ecuador">
+                                <img src="https://i.postimg.cc/wMHvy0sz/AQOk21MJWj_Jzu_Y5El4r_Kd_WO0s_z_CH8mlv_Ci_OPEq7zg87T7BOGq_Ms6M11f8ru_I79Ny_L58t72cip3OG1j_TK2D5BM0.jpg" alt="Cábalas de fin de año con monedas y ropa amarilla">
+                                <img src="https://i.postimg.cc/Gtr28qsr/AQMecp4LXW2G5e_Ki_M36f_CBt_QN_s9_Hb_Plo_M4e_Kr_y_LUNSe_UALa_Y5FXDELQfoa_Q8j9r_Og9x_DB016Yr_ZXHg_IRI4.jpg" alt="Familia realizando ritual de buena suerte">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'cabalas-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-elite">
+                <div class="header-click" onclick="toggleElite(this)">
+                    <h3>06. La Quema</h3>
+                    <span>+</span>
+                </div>
+                <div class="info-desplegable">
+                    <div class="texto-contenido">
+                        <p>El ritual final de fin de año con luces y celebración comunitaria.</p>
+                        <div class="carousel-wrapper" id="quema-slider">
+                            <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'quema-slider')">❮</button>
+                            <div class="carousel-track">
+                                <img src="https://i.postimg.cc/134p33Qg/AQO7MNB0H14g_L4FNVx_Qzstlhks_BGb_Nc_XZCs_SG8hee7a3c6ILw_PImp_K9SAyiq8zpw_T_Zvyji_Xq_N4O6l_Pldddr2o7x.jpg" alt="Celebración de fin de año con luces y alegría">
+                                <img src="https://i.postimg.cc/Gm9kmmCs/AQNyz_R2jt_Alli_Ce3q4ng_QSn51qcg_ZZuez4GCu_B8I_K5W_FZVtz_Sijw_Id_Ps_IM1Kvv20r_S8we_VJMa_c_Zo_Iz7Jipg.jpg" alt="Familias celebrando juntos en la noche">
+                                <img src="https://i.postimg.cc/bwdQwwhD/AQNS3mkw2DMju_El_A2p_Z7HBE4h_JIU6z_V8rzjx51qx_KNAw_Zj_KUa_YAs_KGRu_NRRUga_FK1XXizk_C9Qlw2BXCa_U4_RUp.jpg" alt="Decoraciones tradicionales y luces festivas">
+                                <img src="https://i.postimg.cc/3xWgxxTW/AQN_B2Ze_Zc4p_PPKh_DWv_VQOFHb_NLc_Snsog_Mx_Drcgy_Im8X7ESMXythh_Uvf9Qx_JHQQf04PMCj_Elg_BCuf_R_q2e57Js.jpg" alt="Gente participando en ritual simbólico de fin de año">
+                            </div>
+                            <button class="nav-btn btn-next" onclick="controlSlide(1, 'quema-slider')">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    <div style="margin-bottom: 30px;">
+        <a href="mailto:arice25102009@gmail.com" class="link-lujo">Correo</a>
+        <a href="https://wa.me/593959686552" class="link-lujo" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/share/1AFC5tiwt8/" class="link-lujo" target="_blank">Facebook</a>
+    </div>
+    
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(197, 160, 89, 0.3);">
+        <p style="color: var(--oro); font-family: 'Cinzel'; margin-bottom: 10px;">
+            Especialidad Informática - 2do Curso "C"
+        </p>
+        <p style="opacity: 0.7; font-size: 0.9rem;">
+            Creado por: <span style="color: var(--oro);">Arce Carreño Ariel</span>
+        </p>
+        <p style="margin-top: 40px; opacity: 0.5; font-size: 0.8rem;">
+            © 2026 ECUADOR PRESTIGIO | Todos los derechos reservados
+        </p>
+    </div>
+</footer>
+
+    <script>
+        function toggleElite(element) {
+            const content = element.nextElementSibling;
+            const span = element.querySelector('span');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                span.innerText = "+";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                span.innerText = "-";
+            }
+        }
+
+        const indices = {};
+        function controlSlide(dir, id) {
+            const wrapper = document.getElementById(id);
+            const track = wrapper.querySelector('.carousel-track') || wrapper.querySelector('.hero-carousel-track');
+            const images = track.querySelectorAll('img');
+            if (!indices[id]) indices[id] = 0;
+            indices[id] += dir;
+            if (indices[id] >= images.length) indices[id] = 0;
+            if (indices[id] < 0) indices[id] = images.length - 1;
+            track.style.transform = `translateX(-${indices[id] * 100}%)`;
+        }
+    </script>
+</body>
+</html>
