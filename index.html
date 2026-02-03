@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecuador 2026 | El Legado del Fin de Año</title>
+    <title>🇪🇨 Ecuador 2026 | El Legado del Fin de Año 🎆</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -64,7 +64,7 @@
             font-size: clamp(0.9rem, 3vw, 1.2rem);
         }
 
-        /* --- CARRUSEL PRINCIPAL (ahora debajo del título) --- */
+        /* --- CARRUSEL PRINCIPAL --- */
         .hero-carousel-wrapper {
             width: 100%;
             max-width: 900px;
@@ -127,6 +127,37 @@
             border-radius: 8px;
         }
 
+        .intro-box h2 {
+            font-family: 'Cinzel';
+            margin-bottom: 25px;
+            color: var(--oro);
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+        }
+
+        .intro-box h3 {
+            color: var(--oro);
+            margin: 25px 0 15px;
+            font-family: 'Cinzel';
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+        }
+
+        .intro-box p {
+            margin-bottom: 20px;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            color: #d1d1d1;
+        }
+
+        .intro-box ul, .intro-box ol {
+            text-align: left;
+            margin: 15px 0 15px 20px;
+        }
+
+        .intro-box li {
+            margin-bottom: 10px;
+            color: #d1d1d1;
+            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+        }
+
         /* --- ACORDEÓN --- */
         .seccion-elite {
             background: rgba(255, 255, 255, 0.03);
@@ -151,6 +182,12 @@
             font-size: clamp(1rem, 3vw, 1.2rem);
         }
 
+        .header-click h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .info-desplegable {
             max-height: 0;
             overflow: hidden;
@@ -164,11 +201,23 @@
             font-size: clamp(0.9rem, 2.5vw, 1.05rem);
         }
 
+        .texto-contenido p {
+            margin-bottom: 20px;
+        }
+
+        .texto-contenido ul, .texto-contenido ol {
+            margin: 15px 0 15px 20px;
+        }
+
+        .texto-contenido li {
+            margin-bottom: 10px;
+        }
+
         /* --- CARRUSELES INTERNOS --- */
         .carousel-wrapper {
             width: 100%;
             max-width: 850px;
-            margin: 20px auto 40px;
+            margin: 30px auto 40px;
             position: relative;
             overflow: hidden;
             border: 1px solid var(--oro);
@@ -212,6 +261,12 @@
             color: #000;
         }
 
+        /* Emoji estilos */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
@@ -241,28 +296,34 @@
                 padding: 8px;
                 font-size: 14px;
             }
+            
+            .header-click h3 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
         }
     </style>
 </head>
 <body>
     <section class="hero">
         <div class="hero-title">
-            <p>TRADICIÓN MILENARIA</p>
-            <h1>ECUADOR 2026</h1>
+            <p>🏮 TRADICIÓN MILENARIA 🏮</p>
+            <h1>🇪🇨 ECUADOR 2026 🇪🇨</h1>
         </div>
         
-        <!-- CARRUSEL PRINCIPAL (AHORA DEBAJO DEL TÍTULO) -->
+        <!-- CARRUSEL PRINCIPAL -->
         <div class="hero-carousel-wrapper" id="ano-nuevo-slider">
             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'ano-nuevo-slider')">❮</button>
             <div class="hero-carousel-track">
-                <img src="https://i.postimg.cc/J4rFKZbF/AQNEs_KT00HREb3RTE7c_Xn_Ypn_Flb_P5OVTIzk_Cp_Nix_Eje_Nq6n_WKSLOS9_GVQc_X3L5En_W9ALCLQKINLZMLXZQy_Ytp_.jpg" alt="Celebración de año nuevo con fuegos artificiales">
-                <img src="https://i.postimg.cc/dt5xf36s/AQNRx_gtcpu_HNs4eycg_F2PISh9ec9tw4z_Gvqe_H69Zq_Od_Vep_He_L3hk0e_Joq_Tj_3al_Kgu_G10BSt0Gqe_UXc_o_Hy_O.jpg" alt="Multitud celebrando fin de año con luces">
-                <img src="https://i.postimg.cc/28ktThQb/AQNZ_pt_Sri_T2tzve1w1ojdsy_BQj6c_OVVH4I8_Zo_Yt_Ze1wh_HBQ9Hhd2l_VKIYGUL60IRX0yyyan_Pi_D2y_Cu_BYkzo6w_.jpg" alt="Decoraciones y luces de año nuevo">
-                <img src="https://i.postimg.cc/HsYN3XQf/AQNy_Q520IWEs_Pz7XJ3CZ5PHEh_Cp_OCi_H_v_O4bw8p_BBg_NSjkdi_Id03p_MZ0Y4SWg_Ltz_mm_OB5wd_U6p_Wj_OX_P79n3.jpg" alt="Celebración familiar con alegría y luces">
-                <img src="https://i.postimg.cc/tCqcDWhf/AQO_T2_Fu0ZZ3DR4TM4Kq_Mgcn_FFw_Jd_Ykib69TXa_MApks0Tw7b_B7p_ADBi_Hmne_AKXXzpe_Nb_Ls_EDDDNUk5u_Sommn_S.jpg" alt="Fuegos artificiales sobre ciudad de noche">
-                <img src="https://i.postimg.cc/tCqcDW3n/AQOj9z_AIQ9KEt_O86s_Nk1RLhm_F35RTsvkz_TJg6h3TQe0RSzs_Sk6wxg3rx_TWAOWb5Kn_MZl_A1_GQb_Kzv_F2b_DGS8t8e.jpg" alt="Mesa decorada con luces y globos de año nuevo">
-                <img src="https://i.postimg.cc/DyvN5Lrw/AQOKd1j_WAHmi_VUv0Yoo0AGDu1mywg_Sx_ZSk_Ba_Fs1ub7xy_SMi_C8z2u69ARLSAE5vm6UGQv_Wg4U8h_Hf_Ch_Cmge_GBORy.jpg" alt="Personas brindando con alegría en fin de año">
-                <img src="https://i.postimg.cc/3J8q9mgz/AQP7JAjxm_Tf_MUM8a13ZWv_Liac_If_TXcn_Cgp6Wg_IM9Jn_Xjc3DBFWY87Wm_Yc_Rt_Hdvtx81o4p_Fm_Ii_Nx_Yr_6Pg6V_S.jpg" alt="Celebración de año nuevo con luces y confeti">
+                <img src="https://i.postimg.cc/J4rFKZbF/AQNEs_KT00HREb3RTE7c_Xn_Ypn_Flb_P5OVTIzk_Cp_Nix_Eje_Nq6n_WKSLOS9_GVQc_X3L5En_W9ALCLQKINLZMLXZQy_Ytp_.jpg" alt="🎆 Celebración de año nuevo con fuegos artificiales">
+                <img src="https://i.postimg.cc/dt5xf36s/AQNRx_gtcpu_HNs4eycg_F2PISh9ec9tw4z_Gvqe_H69Zq_Od_Vep_He_L3hk0e_Joq_Tj_3al_Kgu_G10BSt0Gqe_UXc_o_Hy_O.jpg" alt="👨‍👩‍👧‍👦 Multitud celebrando fin de año con luces">
+                <img src="https://i.postimg.cc/28ktThQb/AQNZ_pt_Sri_T2tzve1w1ojdsy_BQj6c_OVVH4I8_Zo_Yt_Ze1wh_HBQ9Hhd2l_VKIYGUL60IRX0yyyan_Pi_D2y_Cu_BYkzo6w_.jpg" alt="✨ Decoraciones y luces de año nuevo">
+                <img src="https://i.postimg.cc/HsYN3XQf/AQNy_Q520IWEs_Pz7XJ3CZ5PHEh_Cp_OCi_H_v_O4bw8p_BBg_NSjkdi_Id03p_MZ0Y4SWg_Ltz_mm_OB5wd_U6p_Wj_OX_P79n3.jpg" alt="🥳 Celebración familiar con alegría y luces">
+                <img src="https://i.postimg.cc/tCqcDWhf/AQO_T2_Fu0ZZ3DR4TM4Kq_Mgcn_FFw_Jd_Ykib69TXa_MApks0Tw7b_B7p_ADBi_Hmne_AKXXzpe_Nb_Ls_EDDDNUk5u_Sommn_S.jpg" alt="🌃 Fuegos artificiales sobre ciudad de noche">
+                <img src="https://i.postimg.cc/tCqcDW3n/AQOj9z_AIQ9KEt_O86s_Nk1RLhm_F35RTsvkz_TJg6h3TQe0RSzs_Sk6wxg3rx_TWAOWb5Kn_MZl_A1_GQb_Kzv_F2b_DGS8t8e.jpg" alt="🍽️ Mesa decorada con luces y globos de año nuevo">
+                <img src="https://i.postimg.cc/DyvN5Lrw/AQOKd1j_WAHmi_VUv0Yoo0AGDu1mywg_Sx_ZSk_Ba_Fs1ub7xy_SMi_C8z2u69ARLSAE5vm6UGQv_Wg4U8h_Hf_Ch_Cmge_GBORy.jpg" alt="🥂 Personas brindando con alegría en fin de año">
+                <img src="https://i.postimg.cc/3J8q9mgz/AQP7JAjxm_Tf_MUM8a13ZWv_Liac_If_TXcn_Cgp6Wg_IM9Jn_Xjc3DBFWY87Wm_Yc_Rt_Hdvtx81o4p_Fm_Ii_Nx_Yr_6Pg6V_S.jpg" alt="🎊 Celebración de año nuevo con luces y confeti">
             </div>
             <button class="nav-btn btn-next" onclick="controlSlide(1, 'ano-nuevo-slider')">❯</button>
         </div>
@@ -270,59 +331,71 @@
 
     <main class="container">
         <div class="intro-box">
-            <h2 style="font-family: 'Cinzel'; margin-bottom: 20px; color: var(--oro);">Patrimonio de Fin de Año</h2>
-            <p>## El Legado que Nos Une
-
-Las tradiciones de fin de año en Ecuador son más que simples costumbres; representan la identidad de un pueblo que sabe celebrar la vida, recordar el pasado y soñar con el futuro. Cada ritual, desde la creación de los monigotes hasta la quema final, está cargado de simbolismo que refleja:
-
-### **Nuestra Historia Multicultural**
-- **Raíces indígenas**: Rituales de purificación por fuego
-- **Influencia española**: Celebración católica del tiempo
-- **Contribución africana**: Alegría y ritmo en las celebraciones
-- **Modernidad**: Adaptación a los tiempos actuales
-
-### **Valores que Transmitimos**
-1. **Unión familiar**: Las celebraciones reúnen a generaciones
-2. **Renovación espiritual**: Dejar atrás lo negativo
-3. **Esperanza colectiva**: Creer en un mejor mañana
-4. **Identidad nacional**: Orgullo de ser ecuatorianos
-
-### **Datos Estadísticos**
-- 95% de familias ecuatorianas celebran con años viejos
-- 8 de cada 10 personas realizan al menos una cábala
-- La venta de fuegos artificiales aumenta un 300% en diciembre
-- Guayaquil tiene el récord del monigote más grande: 15 metros (2019)
-
-### **Tradición en Evolución**
-Mientras mantenemos las esencias, las nuevas generaciones aportan:
-- Monigotes con temas de actualidad (memes, youtubers)
-- Testamentos compartidos en redes sociales
-- Cenas con opciones vegetarianas/veganas
-- Quemas ecológicas con materiales biodegradables
-
-**"El que no vive para servir, no sirve para vivir"** - Refrán popular que resume el espíritu de compartir en estas fechas.</p>
+            <h2>🏺 Patrimonio de Fin de Año 🏺</h2>
+            <p>🎭 <strong>El Legado que Nos Une</strong> 🎭</p>
+            <p>Las tradiciones de fin de año en Ecuador son más que simples costumbres; representan la identidad de un pueblo que sabe celebrar la vida, recordar el pasado y soñar con el futuro. Cada ritual, desde la creación de los monigotes hasta la quema final, está cargado de simbolismo que refleja:</p>
+            
+            <h3>📜 Nuestra Historia Multicultural 🌎</h3>
+            <ul>
+                <li>🏹 <strong>Raíces indígenas:</strong> Rituales de purificación por fuego</li>
+                <li>🏰 <strong>Influencia española:</strong> Celebración católica del tiempo</li>
+                <li>🥁 <strong>Contribución africana:</strong> Alegría y ritmo en las celebraciones</li>
+                <li>🚀 <strong>Modernidad:</strong> Adaptación a los tiempos actuales</li>
+            </ul>
+            
+            <h3>💖 Valores que Transmitimos 🤝</h3>
+            <ol>
+                <li>👨‍👩‍👧‍👦 <strong>Unión familiar:</strong> Las celebraciones reúnen a generaciones</li>
+                <li>🕊️ <strong>Renovación espiritual:</strong> Dejar atrás lo negativo</li>
+                <li>🌟 <strong>Esperanza colectiva:</strong> Creer en un mejor mañana</li>
+                <li>🇪🇨 <strong>Identidad nacional:</strong> Orgullo de ser ecuatorianos</li>
+            </ol>
+            
+            <h3>📊 Datos Estadísticos 📈</h3>
+            <ul>
+                <li>📅 95% de familias ecuatorianas celebran con años viejos</li>
+                <li>🔮 8 de cada 10 personas realizan al menos una cábala</li>
+                <li>🎆 La venta de fuegos artificiales aumenta un 300% en diciembre</li>
+                <li>🏆 Guayaquil tiene el récord del monigote más grande: 15 metros (2019)</li>
+            </ul>
+            
+            <h3>🔄 Tradición en Evolución 🌱</h3>
+            <p>Mientras mantenemos las esencias, las nuevas generaciones aportan:</p>
+            <ul>
+                <li>🤣 Monigotes con temas de actualidad (memes, youtubers)</li>
+                <li>📱 Testamentos compartidos en redes sociales</li>
+                <li>🥗 Cenas con opciones vegetarianas/veganas</li>
+                <li>♻️ Quemas ecológicas con materiales biodegradables</li>
+            </ul>
+            
+            <p>💬 <strong>"El que no vive para servir, no sirve para vivir"</strong> - Refrán popular que resume el espíritu de compartir en estas fechas.</p>
         </div>
 
         <div class="acordeon-maestro">
+            <!-- SECCIÓN 1 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>01. Monigotes y Años Viejos</h3>
+                    <h3><span class="emoji">👻</span> 01. Monigotes y Años Viejos</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>Los "Años Viejos" o "Monigotes" son figuras de cartón, tela o papel que representan personajes públicos, políticos o situaciones del año que termina. Esta tradición tiene sus raíces en:
-- **Origen indígena**: Simboliza la purificación mediante el fuego
-- **Época colonial**: Se mezcló con tradiciones españolas
-- **Significado actual**: Representa dejar atrás lo malo del año
-
-**Datos curiosos:**
-- En Guayaquil se hacen los monigotes más grandes (hasta 10 metros)
-- Familias entierran "testamentos" satíricos dentro del monigote
-- Los materiales más usados: aserrín, papel periódico y ropa vieja
-
-**Ritual familiar:** 
-Toda la familia participa en la creación del monigote, escribiendo en papeles lo que quieren dejar atrás.</p>
+                        <p>Los "Años Viejos" o "Monigotes" son figuras de cartón, tela o papel que representan personajes públicos, políticos o situaciones del año que termina. Esta tradición tiene sus raíces en:</p>
+                        <ul>
+                            <li>🏹 <strong>Origen indígena:</strong> Simboliza la purificación mediante el fuego</li>
+                            <li>🏰 <strong>Época colonial:</strong> Se mezcló con tradiciones españolas</li>
+                            <li>🎯 <strong>Significado actual:</strong> Representa dejar atrás lo malo del año</li>
+                        </ul>
+                        
+                        <p>📌 <strong>Datos curiosos:</strong></p>
+                        <ul>
+                            <li>🏙️ En Guayaquil se hacen los monigotes más grandes (hasta 10 metros)</li>
+                            <li>📜 Familias entierran "testamentos" satíricos dentro del monigote</li>
+                            <li>🛠️ Los materiales más usados: aserrín, papel periódico y ropa vieja</li>
+                        </ul>
+                        
+                        <p>👨‍👩‍👧‍👦 <strong>Ritual familiar:</strong> Toda la familia participa en la creación del monigote, escribiendo en papeles lo que quieren dejar atrás.</p>
+                        
                         <div class="carousel-wrapper" id="viejos-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'viejos-slider')">❮</button>
                             <div class="carousel-track">
@@ -337,28 +410,32 @@ Toda la familia participa en la creación del monigote, escribiendo en papeles l
                 </div>
             </div>
 
+            <!-- SECCIÓN 2 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>02. El Testamento Satírico</h3>
+                    <h3><span class="emoji">📜</span> 02. El Testamento Satírico</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>Documento humorístico que se lee antes de quemar el Año Viejo, donde se hace crítica social con rimas y chistes.
-
-**Elementos tradicionales:**
-1. **Saludo formal**: "En el nombre del humor y la tradición..."
-2. **Herencia jocosa**: Deja "deudas" a personajes públicos
-3. **Consejos absurdos**: Recomendaciones graciosas para el año nuevo
-4. **Firma colectiva**: Lo firman todos los presentes
-
-**Ejemplo de versos tradicionales:**
-"Dejo mi pereza al vecino de enfrente,
-mi mal humor a quien siempre se lamenta,
-y mi sueño matutino al estudiante valiente.
-Lo bueno me lo guardo, eso no se lamenta."
-
-**Origen:** Surge en la costa ecuatoriana a principios del siglo XX.</p>
+                        <p>Documento humorístico que se lee antes de quemar el Año Viejo, donde se hace crítica social con rimas y chistes. 😂</p>
+                        
+                        <p>📝 <strong>Elementos tradicionales:</strong></p>
+                        <ol>
+                            <li>✍️ <strong>Saludo formal:</strong> "En el nombre del humor y la tradición..."</li>
+                            <li>💼 <strong>Herencia jocosa:</strong> Deja "deudas" a personajes públicos</li>
+                            <li>💡 <strong>Consejos absurdos:</strong> Recomendaciones graciosas para el año nuevo</li>
+                            <li>🖋️ <strong>Firma colectiva:</strong> Lo firman todos los presentes</li>
+                        </ol>
+                        
+                        <p>🎭 <strong>Ejemplo de versos tradicionales:</strong></p>
+                        <p>"Dejo mi pereza al vecino de enfrente,<br>
+                        mi mal humor a quien siempre se lamenta,<br>
+                        y mi sueño matutino al estudiante valiente.<br>
+                        Lo bueno me lo guardo, eso no se lamenta."</p>
+                        
+                        <p>🏛️ <strong>Origen:</strong> Surge en la costa ecuatoriana a principios del siglo XX.</p>
+                        
                         <div class="carousel-wrapper" id="testamento-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'testamento-slider')">❮</button>
                             <div class="carousel-track">
@@ -373,26 +450,32 @@ Lo bueno me lo guardo, eso no se lamenta."
                 </div>
             </div>
 
+            <!-- SECCIÓN 3 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>03. El Teatro de las Viudas</h3>
+                    <h3><span class="emoji">👰</span> 03. El Teatro de las Viudas</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>Hombres disfrazados de viudas que recorren las calles llorando la "muerte" del año viejo.
-
-**Características:**
-- **Vestimenta**: Vestidos negros, pelucas, maquillaje exagerado
-- **Actuación**: Llanto teatral, bailes cómicos
-- **Propósito**: Pedir monedas para "el entierro" del año viejo
-
-**Datos históricos:**
-- Originario de Manabí y Esmeraldas
-- Antiguamente solo hombres mayores participaban
-- Hoy incluye a jóvenes con coreografías y música moderna
-
-**Significado social:** Representa el duelo colectivo por lo que termina.</p>
+                        <p>Hombres disfrazados de viudas que recorren las calles llorando la "muerte" del año viejo. 💃😭</p>
+                        
+                        <p>🎭 <strong>Características:</strong></p>
+                        <ul>
+                            <li>👗 <strong>Vestimenta:</strong> Vestidos negros, pelucas, maquillaje exagerado</li>
+                            <li>🎬 <strong>Actuación:</strong> Llanto teatral, bailes cómicos</li>
+                            <li>💰 <strong>Propósito:</strong> Pedir monedas para "el entierro" del año viejo</li>
+                        </ul>
+                        
+                        <p>📜 <strong>Datos históricos:</strong></p>
+                        <ul>
+                            <li>🏝️ Originario de Manabí y Esmeraldas</li>
+                            <li>👴 Antiguamente solo hombres mayores participaban</li>
+                            <li>🕺 Hoy incluye a jóvenes con coreografías y música moderna</li>
+                        </ul>
+                        
+                        <p>🤝 <strong>Significado social:</strong> Representa el duelo colectivo por lo que termina.</p>
+                        
                         <div class="carousel-wrapper" id="viudas-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'viudas-slider')">❮</button>
                             <div class="carousel-track">
@@ -407,36 +490,46 @@ Lo bueno me lo guardo, eso no se lamenta."
                 </div>
             </div>
 
+            <!-- SECCIÓN 4 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>04. Banquetes</h3>
+                    <h3><span class="emoji">🍽️</span> 04. Banquetes</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>La cena de fin de año es un ritual familiar con platos específicos según la región:
-
-**Costa (Guayaquil, Manta):**
-- Pavo horneado con relleno
-- Arroz con menestra y carne asada
-- Ensalada de papas con mayonesa
-- Uvas para las 12 campanadas
-
-**Sierra (Quito, Cuenca):**
-- Hornado (cerdo horneado)
-- Fritada
-- Tamales
-- Colada morada con guaguas de pan (tradición que continúa)
-
-**Amazonía:**
-- Maito de pescado (pescado envuelto en hojas)
-- Chontacuro (gusanos de palma, considerado afrodisíaco)
-- Chicha de yuca
-
-**Significado:** Cada alimento tiene simbolismo:
-- Pavo: Abundancia
-- Uvas: 12 deseos para cada mes
-- Lentejas: Prosperidad económica</p>
+                        <p>La cena de fin de año es un ritual familiar con platos específicos según la región: 🍴🎉</p>
+                        
+                        <p>🏖️ <strong>Costa (Guayaquil, Manta):</strong></p>
+                        <ul>
+                            <li>🦃 Pavo horneado con relleno</li>
+                            <li>🍚 Arroz con menestra y carne asada</li>
+                            <li>🥔 Ensalada de papas con mayonesa</li>
+                            <li>🍇 Uvas para las 12 campanadas</li>
+                        </ul>
+                        
+                        <p>🏔️ <strong>Sierra (Quito, Cuenca):</strong></p>
+                        <ul>
+                            <li>🐖 Hornado (cerdo horneado)</li>
+                            <li>🥩 Fritada</li>
+                            <li>🌽 Tamales</li>
+                            <li>🍓 Colada morada con guaguas de pan (tradición que continúa)</li>
+                        </ul>
+                        
+                        <p>🌴 <strong>Amazonía:</strong></p>
+                        <ul>
+                            <li>🐟 Maito de pescado (pescado envuelto en hojas)</li>
+                            <li>🐛 Chontacuro (gusanos de palma, considerado afrodisíaco)</li>
+                            <li>🥤 Chicha de yuca</li>
+                        </ul>
+                        
+                        <p>✨ <strong>Significado:</strong> Cada alimento tiene simbolismo:</p>
+                        <ul>
+                            <li>🦃 Pavo: Abundancia</li>
+                            <li>🍇 Uvas: 12 deseos para cada mes</li>
+                            <li>🥣 Lentejas: Prosperidad económica</li>
+                        </ul>
+                        
                         <div class="carousel-wrapper" id="banquetes-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'banquetes-slider')">❮</button>
                             <div class="carousel-track">
@@ -451,38 +544,50 @@ Lo bueno me lo guardo, eso no se lamenta."
                 </div>
             </div>
 
+            <!-- SECCIÓN 5 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>05. Cábalas</h3>
+                    <h3><span class="emoji">🔮</span> 05. Cábalas</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>Rituales para atraer buena suerte en el año nuevo:
-
-**1. Las 12 Uvas**
-- Una por cada campanada
-- Cada uva representa un deseo para cada mes
-
-**2. Maletas en la puerta**
-- Sacar maletas vacías para atraer viajes
-- Familias enteras dan la vuelta a la manzana con maletas
-
-**3. Dinero en los zapatos**
-- Billetes dentro de los zapatos para prosperidad
-- Mejor si son billetes nuevos
-
-**4. Ropa interior de colores:**
-- Amarillo: Dinero y prosperidad
-- Rojo: Amor y pasión
-- Verde: Salud y esperanza
-- Blanco: Paz y pureza
-
-**5. Barrer hacia afuera**
-- Barrer la casa de adentro hacia afuera
-- Sacar toda la "mala energía" acumulada
-
-**Origen mestizo:** Mezcla de tradiciones indígenas, españolas y africanas.</p>
+                        <p>Rituales para atraer buena suerte en el año nuevo: 🍀✨</p>
+                        
+                        <p>1. <strong>🍇 Las 12 Uvas</strong></p>
+                        <ul>
+                            <li>⏰ Una por cada campanada</li>
+                            <li>📅 Cada uva representa un deseo para cada mes</li>
+                        </ul>
+                        
+                        <p>2. <strong>🧳 Maletas en la puerta</strong></p>
+                        <ul>
+                            <li>✈️ Sacar maletas vacías para atraer viajes</li>
+                            <li>👨‍👩‍👧‍👦 Familias enteras dan la vuelta a la manzana con maletas</li>
+                        </ul>
+                        
+                        <p>3. <strong>💰 Dinero en los zapatos</strong></p>
+                        <ul>
+                            <li>👞 Billetes dentro de los zapatos para prosperidad</li>
+                            <li>🆕 Mejor si son billetes nuevos</li>
+                        </ul>
+                        
+                        <p>4. <strong>👙 Ropa interior de colores:</strong></p>
+                        <ul>
+                            <li>🟡 Amarillo: Dinero y prosperidad</li>
+                            <li>🔴 Rojo: Amor y pasión</li>
+                            <li>🟢 Verde: Salud y esperanza</li>
+                            <li>⚪ Blanco: Paz y pureza</li>
+                        </ul>
+                        
+                        <p>5. <strong>🧹 Barrer hacia afuera</strong></p>
+                        <ul>
+                            <li>🏠 Barrer la casa de adentro hacia afuera</li>
+                            <li>☁️ Sacar toda la "mala energía" acumulada</li>
+                        </ul>
+                        
+                        <p>🌎 <strong>Origen mestizo:</strong> Mezcla de tradiciones indígenas, españolas y africanas.</p>
+                        
                         <div class="carousel-wrapper" id="cabalas-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'cabalas-slider')">❮</button>
                             <div class="carousel-track">
@@ -497,35 +602,45 @@ Lo bueno me lo guardo, eso no se lamenta."
                 </div>
             </div>
 
+            <!-- SECCIÓN 6 -->
             <div class="seccion-elite">
                 <div class="header-click" onclick="toggleElite(this)">
-                    <h3>06. La Quema</h3>
+                    <h3><span class="emoji">🔥</span> 06. La Quema</h3>
                     <span>+</span>
                 </div>
                 <div class="info-desplegable">
                     <div class="texto-contenido">
-                        <p>El momento culminante de la celebración:
-
-**Procedimiento tradicional:**
-1. **21:00**: Se coloca el monigote en la calle
-2. **23:30**: Se lee el testamento satírico
-3. **23:55**: Se preparan las uvas y maletas
-4. **00:00**: Quema del año viejo con fuegos artificiales
-
-**Elementos simbólicos:**
-- **Fuego**: Purificación y renovación
-- **Estruendo** (fuegos artificiales): Ahuyenta malos espíritus
-- **Cenizas**: Algunas familias las guardan como amuleto
-
-**Seguridad tradicional:**
-- Los mayores supervisan a los niños
-- Se tiene un balde de agua listo
-- Se quema lejos de cables eléctricos
-
-**Variantes regionales:**
-- En Ambato: Concurso de años viejos más creativos
-- En Otavalo: Quema con rituales indígenas adicionales
-- En Galápagos: Quema en playas con conciencia ecológica</p>
+                        <p>El momento culminante de la celebración: 🎇🔥</p>
+                        
+                        <p>⏰ <strong>Procedimiento tradicional:</strong></p>
+                        <ol>
+                            <li>🕘 <strong>21:00:</strong> Se coloca el monigote en la calle</li>
+                            <li>🕦 <strong>23:30:</strong> Se lee el testamento satírico</li>
+                            <li>🕚 <strong>23:55:</strong> Se preparan las uvas y maletas</li>
+                            <li>🕛 <strong>00:00:</strong> Quema del año viejo con fuegos artificiales</li>
+                        </ol>
+                        
+                        <p>✨ <strong>Elementos simbólicos:</strong></p>
+                        <ul>
+                            <li>🔥 <strong>Fuego:</strong> Purificación y renovación</li>
+                            <li>💥 <strong>Estruendo</strong> (fuegos artificiales): Ahuyenta malos espíritus</li>
+                            <li>⚱️ <strong>Cenizas:</strong> Algunas familias las guardan como amuleto</li>
+                        </ul>
+                        
+                        <p>🛡️ <strong>Seguridad tradicional:</strong></p>
+                        <ul>
+                            <li>👴 Los mayores supervisan a los niños</li>
+                            <li>🚰 Se tiene un balde de agua listo</li>
+                            <li>⚡ Se quema lejos de cables eléctricos</li>
+                        </ul>
+                        
+                        <p>🗺️ <strong>Variantes regionales:</strong></p>
+                        <ul>
+                            <li>🏆 En Ambato: Concurso de años viejos más creativos</li>
+                            <li>🏹 En Otavalo: Quema con rituales indígenas adicionales</li>
+                            <li>🐢 En Galápagos: Quema en playas con conciencia ecológica</li>
+                        </ul>
+                        
                         <div class="carousel-wrapper" id="quema-slider">
                             <button class="nav-btn btn-prev" onclick="controlSlide(-1, 'quema-slider')">❮</button>
                             <div class="carousel-track">
@@ -543,29 +658,29 @@ Lo bueno me lo guardo, eso no se lamenta."
     </main>
 
     <footer>
-    <div style="margin-bottom: 30px;">
-        <a href="mailto:arice25102009@gmail.com" class="link-lujo">Correo</a>
-        <a href="https://wa.me/593959686552" class="link-lujo" target="_blank">WhatsApp</a>
-        <a href="https://www.facebook.com/share/1AFC5tiwt8/" class="link-lujo" target="_blank">Facebook</a>
-    </div>
-    
-    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(197, 160, 89, 0.3);">
-        <p style="color: var(--oro); font-family: 'Cinzel'; margin-bottom: 10px;">
-            Especialidad Informática - 2do Curso "C"
-        </p>
-        <p style="color: var(--oro); font-family: 'Cinzel'; margin-bottom: 10px;">
-            Módulo: Diseño Web
-        </p>
-        <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 5px;">
-            Creado por: <span style="color: var(--oro);">Arce Carreño Ariel</span>
-        </p>
-        <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">
-            Fecha: 26/01/2026
-        </p>
-        <p style="margin-top: 40px; opacity: 0.5; font-size: 0.8rem;">
-            © 2026 ECUADOR PRESTIGIO | Todos los derechos reservados
-        </p>
-    </div>
+        <div style="margin-bottom: 30px;">
+            <a href="mailto:arice25102009@gmail.com" class="link-lujo">📧 Correo</a>
+            <a href="https://wa.me/593959686552" class="link-lujo" target="_blank">📱 WhatsApp</a>
+            <a href="https://www.facebook.com/share/1AFC5tiwt8/" class="link-lujo" target="_blank">👥 Facebook</a>
+        </div>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(197, 160, 89, 0.3);">
+            <p style="color: var(--oro); font-family: 'Cinzel'; margin-bottom: 10px; font-size: 1.1rem;">
+                🎓 Especialidad Informática - 2do Curso "C"
+            </p>
+            <p style="color: var(--oro); font-family: 'Cinzel'; margin-bottom: 10px; font-size: 1.1rem;">
+                💻 Módulo: Diseño Web
+            </p>
+            <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 5px;">
+                👨‍💻 Creado por: <span style="color: var(--oro);">Arce Carreño Ariel</span>
+            </p>
+            <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">
+                📅 Fecha: 26/01/2026
+            </p>
+            <p style="margin-top: 40px; opacity: 0.5; font-size: 0.8rem;">
+                © 2026 🇪🇨 ECUADOR PRESTIGIO | Todos los derechos reservados
+            </p>
+        </div>
     </footer>
 
     <script>
